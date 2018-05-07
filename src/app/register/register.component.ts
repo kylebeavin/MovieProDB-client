@@ -31,7 +31,7 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this._registerForm);
+    console.log(this._registerForm.value);
   }
 
 }
