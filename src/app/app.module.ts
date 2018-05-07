@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
-import { BrowseEntriesComponent } from './browse-entries/browse-entries.component';
-import { AddEntriesComponent } from './add-entries/add-entries.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { BrowseEntriesComponent } from './components/browse-entries/browse-entries.component';
+import { AddEntriesComponent } from './components/add-entries/add-entries.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
