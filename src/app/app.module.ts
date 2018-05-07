@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SigninComponent } from './signin/signin.component';
+import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { BrowseEntriesComponent } from './browse-entries/browse-entries.component';
 import { AddEntriesComponent } from './add-entries/add-entries.component';
@@ -15,7 +15,7 @@ import { MaterialModule } from './material.module';
 @NgModule({
   declarations: [
     AppComponent,
-    SigninComponent,
+    RegisterComponent,
     LoginComponent,
     BrowseEntriesComponent,
     AddEntriesComponent
