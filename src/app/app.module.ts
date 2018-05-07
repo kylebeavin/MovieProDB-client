@@ -11,6 +11,7 @@ import { AddEntriesComponent } from './add-entries/add-entries.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RegisterComponent,
     LoginComponent,
     BrowseEntriesComponent,
-    AddEntriesComponent
+    AddEntriesComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
