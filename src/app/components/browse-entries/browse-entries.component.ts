@@ -17,4 +17,8 @@ export class BrowseEntriesComponent implements OnInit {
   ngOnInit() {
   }
 
+  onRowClicked = row => {
+    console.log(row)
+  }
+
 }
