@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http';
 
 const Api_Url = 'http://localhost:3000/api/users';
 
+
+
 @Injectable()
 export class AuthService {
 
@@ -11,6 +13,6 @@ export class AuthService {
 
   register(regUserData: RegisterUser) {
     this._http.post(`${Api_Url}/register`, regUserData)
-      .subscribe(res => console.log('User created.'))
+      .subscribe(regData: RegisterUser)
   }
 }
