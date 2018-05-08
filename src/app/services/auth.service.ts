@@ -10,7 +10,7 @@ export class AuthService {
   constructor(private _http: HttpClient) { }
 
   register(regUserData: RegisterUser) {
-    this._http.post(`${Api_Url}/register`, regUserData);
+    this._http.post(`${Api_Url}/register`, regUserData)
+      .subscribe(res => console.log('User created.'))
   }
-
 }
