@@ -1,3 +1,39 @@
-<p>
-  browse-entries works!
-</p>
+<mat-table class="browseTable mat-elevation-z5" [dataSource]="entries">
+  <ng-container matColumnDef="entryID">
+    <mat-header-cell *matHeaderCellDef>#</mat-header-cell>
+    <mat-cell *matCellDef="let entry">{{entry.id}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="sceneID">
+    <mat-header-cell *matHeaderCellDef>Scene ID</mat-header-cell>
+    <mat-cell class="sceneID-cell" *matCellDef="let entry">{{entry.scene_id}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="productID">
+    <mat-header-cell *matHeaderCellDef>Product ID</mat-header-cell>
+    <mat-cell class="productID-cell" *matCellDef="let entry">{{entry.product_id}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="creatorID">
+    <mat-header-cell *matHeaderCellDef>Entry Creator</mat-header-cell>
+    <mat-cell class="creatorID-cell" *matCellDef="let entry">{{entry.entryCreator_id}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="creationDate">
+    <mat-header-cell *matHeaderCellDef>Created</mat-header-cell>
+    <mat-cell class="creationDate-cell" *matCellDef="let entry">{{entry.entryCreation}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="editorID">
+    <mat-header-cell *matHeaderCellDef>Last Editor</mat-header-cell>
+    <mat-cell class="creatorID-cell" *matCellDef="let entry">{{entry.lastEditor_id}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="lastEdited">
+    <mat-header-cell *matHeaderCellDef>Last Edit</mat-header-cell>
+    <mat-cell class="lastEdited-cell" *matCellDef="let entry">{{entry.lastEdited}}</mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+</mat-table>
