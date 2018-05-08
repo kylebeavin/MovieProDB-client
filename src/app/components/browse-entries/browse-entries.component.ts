@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Entry } from './entry';
+import { Entry } from '../../models/entry';
 import { ENTRIES } from './sample-entries';
 
 @Component({
