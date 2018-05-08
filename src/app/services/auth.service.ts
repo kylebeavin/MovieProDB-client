@@ -11,6 +11,9 @@ export class AuthService {
 
   register(regUserData: RegisterUser) {
     this._http.post(`${Api_Url}/register`, {'user': regUserData})
-      .subscribe(res => console.log('User created.'))
+      .subscribe(res => {
+        const userData: any = res;
+        localStorage.setItem('sessionToken', userData.sessionToken)
+      })
   }
 }

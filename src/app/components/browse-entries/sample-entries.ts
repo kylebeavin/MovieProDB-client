@@ -1,4 +1,4 @@
-import { Entry } from './entry';
+import { Entry } from '../../models/entry';
 
 export const ENTRIES: Entry[] = [
   {id: 1, scene_id: 101, product_id: 455, entryCreator_id: 5, entryCreation: "4/27/18 at 1:15 PM", lastEditor_id: 7, lastEdited: "4/28/18 at 3:25 PM"},
