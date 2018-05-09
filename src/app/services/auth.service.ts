@@ -18,4 +18,13 @@ export class AuthService {
         localStorage.setItem('sessionToken', userData.sessionToken)
       })
   }
+
+  login() {
+
+  }
+
+  logout() {
+    localStorage.clear();
+  }
+
 }
