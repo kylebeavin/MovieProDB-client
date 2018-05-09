@@ -18,7 +18,7 @@ export class AuthService {
       .subscribe(res => {
         const userData: any = res;
         localStorage.setItem('token', userData.sessionToken)
-        this._router.navigate(['/create'])
+        this._router.navigate(['/splash'])
       })
   }
 
@@ -27,7 +27,7 @@ export class AuthService {
       .subscribe(res => {
         const loginInfo: any = res;
         localStorage.setItem('token', loginInfo.sessionToken)
-        this._router.navigate(['/create'])
+        this._router.navigate(['/splash'])
       })
   }
 
