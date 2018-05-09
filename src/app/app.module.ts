@@ -16,12 +16,18 @@ import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AddMoviesComponent } from './components/add-movies/add-movies.component';
+import { AddProductsComponent } from './components/add-products/add-products.component';
+import { Navbar2Component } from './components/navbar2/navbar2.component';
+import { SplashComponent } from './components/splash/splash.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     routingComponents,
+    AddProductsComponent,
+    Navbar2Component,
+    SplashComponent,
     AddMoviesComponent
   ],
   imports: [
