@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { RegisterUser } from '../models/RegisterUser';
 import { HttpClient } from '@angular/common/http';
-import { WSAEUSERS } from 'constants';
-import { userInfo } from 'os';
 
 const Api_Url = 'http://localhost:3000/api/users';
 

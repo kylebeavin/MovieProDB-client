@@ -34,7 +34,6 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     console.log(this._registerForm.value);
     this._authService.register(this._registerForm.value);
-    console.log("this is being executed under the register method")
   }
 
 }
