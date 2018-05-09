@@ -15,6 +15,7 @@ import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AddProductsComponent } from './components/add-products/add-products.component';
+import { AddMoviesComponent } from './components/add-movies/add-movies.component';
 import { Navbar2Component } from './components/navbar2/navbar2.component';
 import { SplashComponent } from './components/splash/splash.component';
 
@@ -25,7 +26,8 @@ import { SplashComponent } from './components/splash/splash.component';
     routingComponents,
     AddProductsComponent,
     Navbar2Component,
-    SplashComponent
+    SplashComponent,
+    AddMoviesComponent
   ],
   imports: [
     BrowserModule,
