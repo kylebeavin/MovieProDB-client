@@ -1,3 +1,19 @@
-<p>
-  add-movies works!
-</p>
+<form class="movie-form" (ngSubmit)="onSubmit()" [formGroup]="_addMovie">
+  <mat-form-field class="add-movie-title">
+    <input matInput placeholder="Movie title" value="" formControlName="title">
+  </mat-form-field>
+
+  <mat-form-field class="add-studio">
+    <input matInput placeholder="Production company" formControlName="productionCompany"></input>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Genre" formControlName="genre">
+      <mat-option *ngFor="let genre of genres" [value]="genre.value">
+        {{ genre.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Add Movie</button>
+</form>
