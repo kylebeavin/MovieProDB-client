@@ -11,5 +11,8 @@ export class MovieService {
 
   addMovie(newMovie: Movie) {
     this._http.post(Api_Url, {'movie': newMovie})
+      .subscribe(res => {
+        console.log(res)
+      })
   }
 }
