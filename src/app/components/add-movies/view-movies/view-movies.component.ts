@@ -10,7 +10,7 @@ import { MOVIES } from './sample-movies';
   styleUrls: ['./view-movies.component.scss']
 })
 export class ViewMoviesComponent implements OnInit {
-  movies: any = MOVIES;
+  movies: any;
   displayedColumns = ["title", "productionCompany", "genre"]
 
   constructor(private _movieService: MovieService) { }
@@ -19,7 +19,6 @@ export class ViewMoviesComponent implements OnInit {
     this._movieService.getAllMovies()
       .subscribe(
         movieData => {
-          console.log(movieData)
           this.movies = movieData;
         }
       )
