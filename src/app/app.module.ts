@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { CdkTableModule } from '@angular/cdk/table';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,7 @@ import { AddMoviesComponent } from './components/add-movies/add-movies.component
 import { AddProductsComponent } from './components/add-products/add-products.component';
 import { Navbar2Component } from './components/navbar2/navbar2.component';
 import { SplashComponent } from './components/splash/splash.component';
+import { ViewMoviesComponent } from './components/add-movies/view-movies/view-movies.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { SplashComponent } from './components/splash/splash.component';
     AddProductsComponent,
     Navbar2Component,
     SplashComponent,
-    AddMoviesComponent
+    AddMoviesComponent,
+    ViewMoviesComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { SplashComponent } from './components/splash/splash.component';
     MaterialModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CdkTableModule
   ],
   providers: [AuthService, MovieService, ProductService],
   bootstrap: [AppComponent]

@@ -13,7 +13,8 @@ export class AddMoviesComponent implements OnInit {
     {value: 'action-02', viewValue: 'Action'},
     {value: 'suspense-03', viewValue: 'Suspense'},
     {value: 'horror-04', viewValue: 'Horror'},
-    {value: 'romance-05', viewValue: 'Romance'}
+    {value: 'romance-05', viewValue: 'Romance'},
+    {value: 'misc-06', viewValue: 'Misc.'}
   ]
 
   private _movieForm: FormGroup;
