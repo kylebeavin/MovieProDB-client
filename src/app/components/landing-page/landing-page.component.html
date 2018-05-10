@@ -1,2 +1,12 @@
-<app-register></app-register>
-<app-login></app-login>
+<mat-grid-list cols="2" rowHeight="500px">
+    <mat-grid-tile
+        *ngFor="let tile of tiles"
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows">
+        <app-register></app-register>
+        <app-login></app-login>
+    </mat-grid-tile>    
+</mat-grid-list>
+
+
+
