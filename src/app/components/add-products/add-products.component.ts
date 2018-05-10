@@ -8,13 +8,7 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./add-products.component.scss']
 })
 export class AddProductsComponent implements OnInit {
-  categories = [
-    {value: 'vehicles-01', viewValue: 'Vehicles'},
-    {value: 'clothing-02', viewValue: 'Clothing'},
-    {value: 'accessories-03', viewValue: 'Accessories'},
-    {value: 'makeup-04', viewValue: 'Makeup'},
-    {value: 'memorabilia-05', viewValue: 'Memorabilia'}
-  ]
+  categories = ['Vehicles','Clothing','Accessories','Makeup','Memorabilia']
 
   private _productForm: FormGroup;
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieService } from '../../../services/movies.service';
 
 import { Movie } from '../../../models/Movie';
 import { MOVIES } from './sample-movies';
@@ -12,10 +13,15 @@ export class ViewMoviesComponent implements OnInit {
   movies = MOVIES;
   displayedColumns = ["title", "productionCompany", "genre"]
 
-  constructor() { }
+  constructor(private _movieService: MovieService) { }
 
   ngOnInit() {
-    console.log(MOVIES)
+    this._movieService.getAllMovies()
+      .subscribe(
+        movieData => {
+          this.movies = movieData;
+        }
+      )
   }
 
 }
