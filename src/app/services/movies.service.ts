@@ -15,4 +15,8 @@ export class MovieService {
         console.log(res)
       })
   }
+
+  getAllMovies() {
+    return this._http.get(Api_Url)
+  }
 }
