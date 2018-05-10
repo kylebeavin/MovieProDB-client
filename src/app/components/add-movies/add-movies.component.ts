@@ -8,8 +8,6 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./add-movies.component.scss']
 })
 export class AddMoviesComponent implements OnInit {
-  private _movieForm: FormGroup;
-
   genres = [
     {value: 'comedy-01', viewValue: 'Comedy'},
     {value: 'action-02', viewValue: 'Action'},
@@ -18,10 +16,13 @@ export class AddMoviesComponent implements OnInit {
     {value: 'romance-05', viewValue: 'Romance'}
   ]
 
+  private _movieForm: FormGroup;
+
   constructor(private _form: FormBuilder, private _movieService: MovieService) { }
 
   ngOnInit() {
     this.createForm();
+    document.getElementById("movieNameField").focus();
   }
 
   createForm() {
@@ -34,6 +35,7 @@ export class AddMoviesComponent implements OnInit {
 
   onSubmit() {
     this._movieService.addMovie(this._movieForm.value)
+    this._movieForm.reset();
+    document.getElementById("movieNameField").focus();
   }
-
 }

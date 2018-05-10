@@ -11,6 +11,7 @@ import { AddEntriesComponent } from './components/add-entries/add-entries.compon
 
 import { AuthService } from './services/auth.service';
 import { MovieService } from './services/movies.service';
+import { ProductService } from './services/products.service';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
@@ -40,7 +41,7 @@ import { SplashComponent } from './components/splash/splash.component';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [AuthService, MovieService],
+  providers: [AuthService, MovieService, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
