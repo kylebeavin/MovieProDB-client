@@ -1,24 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { CdkTableModule } from '@angular/cdk/table';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
-import { BrowseEntriesComponent } from './browse-entries/browse-entries.component';
-import { AddEntriesComponent } from './add-entries/add-entries.component';
+import { AuthService } from './services/auth.service';
+import { MovieService } from './services/movies.service';
+import { ProductService } from './services/products.service';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent,
-    LoginComponent,
-    BrowseEntriesComponent,
-    AddEntriesComponent
+    NavbarComponent,
+    routingComponents,
   ],
   imports: [
     BrowserModule,
@@ -26,9 +26,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    CdkTableModule
   ],
-  providers: [],
+  providers: [AuthService, MovieService, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

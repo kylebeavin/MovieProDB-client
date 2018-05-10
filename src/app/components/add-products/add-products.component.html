@@ -1,0 +1,40 @@
+<h1>Add a Product</h1>
+<hr />
+
+<form class="product-form" (ngSubmit)="onSubmit()" [formGroup]="_productForm">
+  <div>
+    <mat-form-field class="add-product-name">
+      <input matInput id="productNameField" placeholder="Product name" value="" formControlName="productName" type="text" />
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field class="add-seller">
+      <input matInput placeholder="Seller" formControlName="seller" type="text" />
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field class="add-product-number">
+      <input matInput placeholder="Product number" value="" formControlName="productNumber" type="text" />
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field class="add-price">
+      <input matInput placeholder="Price" value="" formControlName="price" type="text" />
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field>
+      <mat-select placeholder="Category" formControlName="category">
+        <mat-option *ngFor="let category of categories" [value]="category">
+          {{ category }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <button mat-raised-button color="primary" type="submit">Add Product</button>
+</form>

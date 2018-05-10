@@ -1,0 +1,24 @@
+<mat-table class="moviesTable mat-elevation-z5" [dataSource]="movies">
+  <!-- <ng-container matColumnDef="createdAt">
+    <mat-header-cell *matHeaderCellDef>Created At</mat-header-cell>
+    <mat-cell *matCellDef="let movie">{{movie.createdAt}}</mat-cell>
+  </ng-container> -->
+
+  <ng-container matColumnDef="title">
+    <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
+    <mat-cell *matCellDef="let movie">{{movie.title}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="productionCompany">
+    <mat-header-cell *matHeaderCellDef>Production Company</mat-header-cell>
+    <mat-cell *matCellDef="let movie">{{movie.productionCompany}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="genre">
+    <mat-header-cell *matHeaderCellDef>Genre</mat-header-cell>
+    <mat-cell *matCellDef="let movie">{{movie.genre}}</mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+</mat-table>
