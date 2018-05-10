@@ -11,11 +11,14 @@ import { AddProductsComponent } from './components/add-products/add-products.com
 import { Navbar2Component } from './components/navbar2/navbar2.component';
 import { SplashComponent } from './components/splash/splash.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { ViewMoviesComponent } from './components/add-movies/view-movies/view-movies.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'landing-page', pathMatch:'full'},
   { path: 'add-entries', component: AddEntriesComponent },
-  { path: 'add-movies', component: AddMoviesComponent },
+  { path: 'add-movies', component: AddMoviesComponent, children: [
+    { path: 'view-movies', component: ViewMoviesComponent }
+  ] },
   { path: 'add-products', component: AddProductsComponent },
   { path: 'splash', component: SplashComponent, children: [
     { path: 'navbar2', component: Navbar2Component },
@@ -33,4 +36,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [RegisterComponent, LoginComponent, BrowseEntriesComponent, AddEntriesComponent, AddMoviesComponent, AddProductsComponent, SplashComponent, Navbar2Component, LandingPageComponent]
+export const routingComponents = [RegisterComponent, LoginComponent, BrowseEntriesComponent, AddEntriesComponent, AddMoviesComponent, AddProductsComponent, SplashComponent, Navbar2Component, LandingPageComponent, ViewMoviesComponent]
