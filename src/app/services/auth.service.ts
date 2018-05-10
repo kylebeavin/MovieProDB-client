@@ -6,8 +6,6 @@ import { Router } from '@angular/router';
 
 const Api_Url = 'http://localhost:3000/api/users';
 
-
-
 @Injectable()
 export class AuthService {
 
@@ -18,7 +16,7 @@ export class AuthService {
       .subscribe(res => {
         const userData: any = res;
         localStorage.setItem('token', userData.sessionToken)
-        this._router.navigate(['/create'])
+        this._router.navigate(['/splash'])
       })
   }
 
@@ -27,7 +25,7 @@ export class AuthService {
       .subscribe(res => {
         const loginInfo: any = res;
         localStorage.setItem('token', loginInfo.sessionToken)
-        this._router.navigate(['/create'])
+        this._router.navigate(['/splash'])
       })
   }
 

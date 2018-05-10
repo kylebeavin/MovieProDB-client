@@ -1,16 +1,16 @@
 <h1>Add a Movie</h1>
 <hr />
 
-<form class="movie-form" (ngSubmit)="onSubmit()" [formGroup]="_addMovie">
+<form class="movie-form" (ngSubmit)="onSubmit()" [formGroup]="_movieForm">
   <div>
     <mat-form-field class="add-movie-title">
-      <input matInput placeholder="Movie title" value="" formControlName="title">
+      <input matInput id="movieNameField" placeholder="Movie title" value="" formControlName="title" type="text" />
     </mat-form-field>
   </div>
 
   <div>
     <mat-form-field class="add-studio">
-      <input matInput placeholder="Production company" formControlName="productionCompany">
+      <input matInput placeholder="Production company" formControlName="productionCompany" type="text" />
     </mat-form-field>
   </div>
 
@@ -26,3 +26,6 @@
 
   <button mat-raised-button color="primary" type="submit">Add Movie</button>
 </form>
+
+<hr />
+<app-view-movies></app-view-movies>
