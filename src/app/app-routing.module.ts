@@ -12,15 +12,16 @@ import { Navbar2Component } from './components/navbar2/navbar2.component';
 import { SplashComponent } from './components/splash/splash.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { ViewMoviesComponent } from './components/add-movies/view-movies/view-movies.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'landing-page', pathMatch:'full'},
   { path: 'add-entries', component: AddEntriesComponent },
-  { path: 'add-movies', component: AddMoviesComponent, children: [
+  { path: 'add-movies', component: AddMoviesComponent, canActivate: [AuthGuard], children: [
     { path: 'view-movies', component: ViewMoviesComponent }
   ] },
-  { path: 'add-products', component: AddProductsComponent },
-  { path: 'splash', component: SplashComponent, children: [
+  { path: 'add-products', canActivate: [AuthGuard], component: AddProductsComponent },
+  { path: 'splash', component: SplashComponent, canActivate: [AuthGuard], children: [
     { path: 'navbar2', component: Navbar2Component },
     { path: 'browse', component: BrowseEntriesComponent },
   ] },
@@ -33,7 +34,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AuthGuard]
 })
 export class AppRoutingModule { }
 export const routingComponents = [RegisterComponent, LoginComponent, BrowseEntriesComponent, AddEntriesComponent, AddMoviesComponent, AddProductsComponent, SplashComponent, Navbar2Component, LandingPageComponent, ViewMoviesComponent]
