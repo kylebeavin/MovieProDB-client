@@ -10,7 +10,7 @@ export class AuthGuard implements CanActivate {
     canActivate(): Observable<boolean> {
         return new Observable<boolean>( observer => {
             if (!localStorage.getItem('token')) {
-                this.router.navigate(['/login']);
+                this.router.navigate(['/landing-page']);
                 return observer.next(false);
             } else {
                 return observer.next(true);
