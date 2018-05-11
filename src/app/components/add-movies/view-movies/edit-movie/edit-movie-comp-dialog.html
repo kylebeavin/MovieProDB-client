@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>Update Movie</h1>
+<div mat-dialog-content>
+  <p>Title</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.title" >
+  </mat-form-field>
+</div>
+
+<div mat-dialog-content>
+  <p>Production Company</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.productionCompany">
+  </mat-form-field>
+</div>
+
+  <div mat-dialog-content>
+    <p>Genre</p>
+    <mat-form-field>
+      <input matInput [(ngModel)]="data.genre">
+    </mat-form-field>
+  </div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" (click)="onSubmitUpdate()" cdkFocusInitial>Submit</button>
+</div>

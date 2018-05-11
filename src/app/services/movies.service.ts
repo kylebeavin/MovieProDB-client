@@ -19,4 +19,11 @@ export class MovieService {
   getAllMovies() {
     return this._http.get(Api_Url)
   }
+
+  updateMovie(movieUpdate: Movie) {
+    this._http.put(`${Api_Url}/${movieUpdate.id}`, {'movie': movieUpdate})
+      .subscribe(res => {
+        console.log(res)
+      })
+  }
 }
