@@ -26,6 +26,13 @@
     </mat-cell> 
   </ng-container>
 
+  <ng-container matColumnDef="deleteMovie">
+    <mat-header-cell *matHeaderCellDef>Delete</mat-header-cell>
+    <mat-cell *matCellDef="let movie">
+        <app-delete-movie [movie]=movie></app-delete-movie>
+    </mat-cell> 
+  </ng-container>
+
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
 </mat-table>

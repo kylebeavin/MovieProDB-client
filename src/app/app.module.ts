@@ -14,6 +14,7 @@ import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { EditMovieComponent, EditMovieCompDialog } from './components/add-movies/view-movies/edit-movie/edit-movie.component';
+import { DeleteMovieComponent, DeleteMovieCompDialog } from './components/add-movies/view-movies/delete-movie/delete-movie.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +22,15 @@ import { EditMovieComponent, EditMovieCompDialog } from './components/add-movies
     NavbarComponent,
     routingComponents,
     EditMovieComponent,
-    EditMovieCompDialog
+    EditMovieCompDialog,
+    DeleteMovieComponent,
+    DeleteMovieCompDialog
   ],
   entryComponents: [
     EditMovieComponent,
-    EditMovieCompDialog
+    EditMovieCompDialog,
+    DeleteMovieComponent,
+    DeleteMovieCompDialog
   ],
   imports: [
     BrowserModule,

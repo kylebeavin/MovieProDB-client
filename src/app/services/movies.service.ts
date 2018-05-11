@@ -26,4 +26,8 @@ export class MovieService {
         console.log(res)
       })
   }
+
+  deleteMovie(deletedMovie: Movie) {
+    return this._http.delete(`${Api_Url}/delete/${deletedMovie.id}`)
+  }
 }

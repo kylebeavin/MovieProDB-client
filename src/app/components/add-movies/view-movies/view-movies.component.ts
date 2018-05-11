@@ -10,7 +10,7 @@ import { Movie } from '../../../models/Movie';
 })
 export class ViewMoviesComponent implements OnInit {
   movies: any;
-  displayedColumns = ["title", "productionCompany", "genre", "editMovie"]
+  displayedColumns = ["title", "productionCompany", "genre", "editMovie", "deleteMovie"]
 
   constructor(private _movieService: MovieService) { }
 
