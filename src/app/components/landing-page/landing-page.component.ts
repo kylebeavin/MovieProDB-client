@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
-  showHide: boolean = true;
+  showHide: boolean = false;
   changeShowStatus(){
     this.showHide = !this.showHide;
   }

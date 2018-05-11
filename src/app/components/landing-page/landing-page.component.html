@@ -1,17 +1,16 @@
 <mat-grid-list cols="2" rowHeight="900px">
     <mat-grid-tile>
-      <div><app-register [dontShow]="showHide"></app-register></div>
-
+        <div>
+            <app-register [dontShow]="showHide"></app-register>
+        </div>
     </mat-grid-tile>
     <mat-grid-tile>
-        <app-login></app-login>
-        <button mat-raised-button class="nav-btn" color="accent" type="button" label="Click" 
-        (click)="changeShowStatus()">click</button>
+        <mat-card>
+            <app-login></app-login>
+            <button mat-raised-button class="nav-btn" id="click" color="accent" type="button" label="Click" (click)="changeShowStatus()">click</button>
+        </mat-card>
     </mat-grid-tile>
     <mat-grid-tile></mat-grid-tile>
     <mat-grid-tile>
-    </mat-grid-tile>    
+    </mat-grid-tile>
 </mat-grid-list>
-
-
-
