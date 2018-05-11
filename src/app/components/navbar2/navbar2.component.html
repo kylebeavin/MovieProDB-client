@@ -1,3 +1,23 @@
-<mat-toolbar color="primary" class="mat-elevation-z4">
-  <span>Iridium</span>
-</mat-toolbar>
+<mat-grid-list cols="5" rowHeight="2:1">
+  <mat-grid-tile></mat-grid-tile>
+  <mat-grid-tile class="example-card">
+    <mat-grid-tile-header>
+      <h1>A</h1>
+    </mat-grid-tile-header>
+      <img src="../../../assets/movie1.jpeg">
+    <mat-grid-tile-footer>
+      <button mat-button routerLink="/add-products">Add A Product</button>
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+  <mat-grid-tile></mat-grid-tile>
+  <mat-grid-tile class="example-card">
+    <mat-grid-tile-header>
+      <h1>Yo</h1>
+    </mat-grid-tile-header>
+      <img src="../../../assets/auditoriumChairs.jpg">
+    <mat-grid-tile-footer>
+      <button mat-button routerLink="/add-movies">Add A Movie</button>
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+  <mat-grid-tile></mat-grid-tile>
+</mat-grid-list>
