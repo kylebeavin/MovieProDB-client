@@ -19,9 +19,6 @@ import { EditMovieComponent, EditMovieCompDialog } from './components/add-movies
   declarations: [
     AppComponent,
     NavbarComponent,
-<<<<<<< HEAD
-    routingComponents
-=======
     routingComponents,
     EditMovieComponent,
     EditMovieCompDialog
@@ -29,7 +26,6 @@ import { EditMovieComponent, EditMovieCompDialog } from './components/add-movies
   entryComponents: [
     EditMovieComponent,
     EditMovieCompDialog
->>>>>>> 02546186f5026580c668d26b294c90b16f4f16dd
   ],
   imports: [
     BrowserModule,

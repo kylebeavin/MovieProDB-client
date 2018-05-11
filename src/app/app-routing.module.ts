@@ -12,11 +12,9 @@ import { Navbar2Component } from './components/navbar2/navbar2.component';
 import { SplashComponent } from './components/splash/splash.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { ViewMoviesComponent } from './components/add-movies/view-movies/view-movies.component';
-<<<<<<< HEAD
 import { AuthGuard } from './guards/auth.guard';
-=======
 import { AddUsersComponent } from './components/add-users/add-users.component';
->>>>>>> nikaya
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'landing-page', pathMatch:'full'},
