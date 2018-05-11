@@ -1,51 +1,57 @@
-<h1>Register</h1>
-<h4>Create a new account</h4>
-<hr>
-
-<form (ngSubmit)="onSubmit()" [formGroup]="_registerForm">
-  <div>
-    <div>
-      <mat-form-field>
-        <input matInput placeholder="First name" formControlName="firstName" type="text"/>
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field>
-        <input matInput placeholder="Last name" formControlName="lastName" type="text"/>
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field>
-        <input matInput placeholder="Email" formControlName="email" type="email"/>
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field>
-        <input matInput placeholder="Username" formControlName="username" type="text"/>
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field>
-        <input matInput placeholder="Password" formControlName="password" type="password"/>
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field>
-        <input matInput placeholder="Company" formControlName="company" type="text"/>
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field>
-        <input matInput placeholder="Job title" formControlName="title" type="text"/>
-      </mat-form-field>
-    </div>
-    <!-- <div>
+<mat-card class="register-card">
+  <mat-card-header>
+    <mat-card-title>Register</mat-card-title>
+    <mat-card-subtitle>Create a new account</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <form (ngSubmit)="onSubmit()" [formGroup]="_registerForm">
+      <div>
+        <div>
+          <mat-form-field>
+            <input matInput placeholder="First name" formControlName="firstName" type="text" />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input matInput placeholder="Last name" formControlName="lastName" type="text" />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input matInput placeholder="Email" formControlName="email" type="email" />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input matInput placeholder="Username" formControlName="username" type="text" />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input matInput placeholder="Password" formControlName="password" type="password" />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input matInput placeholder="Company" formControlName="company" type="text" />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input matInput placeholder="Job title" formControlName="title" type="text" />
+          </mat-form-field>
+        </div>
+        <!-- <div>
       <mat-form-field>
         <input matInput placeholder="User type" formControlName="userType" type="radio" ng-model="variablename" value="super"/>Super
         <input matInput placeholder="User type" formControlName="userType" type="radio" ng-model="variablename" value="admin"/>Admin
         <input matInput placeholder="User type" formControlName="userType" type="radio" ng-model="variablename" value="user"/>User
       </mat-form-field>
     </div> -->
-  </div>
-  <button mat-raised-button class="nav-btn" color="accent" type="submit">Register</button>
-</form>
+      </div>
+      <mat-card-actions>
+        <button mat-raised-button class="nav-btn" color="accent" type="submit">Register</button>
+      </mat-card-actions>
+    </form>
+  </mat-card-content>
+</mat-card>
