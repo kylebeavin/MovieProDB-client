@@ -15,7 +15,6 @@ import { ViewMoviesComponent } from './components/add-movies/view-movies/view-mo
 import { AuthGuard } from './guards/auth.guard';
 import { AddUsersComponent } from './components/add-users/add-users.component';
 
-
 const routes: Routes = [
   { path: '', redirectTo: 'landing-page', pathMatch:'full'},
   { path: 'add-entries', component: AddEntriesComponent },
