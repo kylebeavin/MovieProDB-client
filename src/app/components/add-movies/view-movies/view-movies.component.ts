@@ -11,7 +11,7 @@ import { MOVIES } from './sample-movies';
 })
 export class ViewMoviesComponent implements OnInit {
   movies: any;
-  displayedColumns = ["title", "productionCompany", "genre"]
+  displayedColumns = ["title", "productionCompany", "genre", "editMovie"]
 
   constructor(private _movieService: MovieService) { }
 
