@@ -12,7 +12,11 @@ import { Navbar2Component } from './components/navbar2/navbar2.component';
 import { SplashComponent } from './components/splash/splash.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { ViewMoviesComponent } from './components/add-movies/view-movies/view-movies.component';
+<<<<<<< HEAD
 import { AuthGuard } from './guards/auth.guard';
+=======
+import { AddUsersComponent } from './components/add-users/add-users.component';
+>>>>>>> nikaya
 
 const routes: Routes = [
   { path: '', redirectTo: 'landing-page', pathMatch:'full'},
@@ -27,9 +31,11 @@ const routes: Routes = [
   ] },
   { path: 'landing-page', component: LandingPageComponent, children: [
     { path: 'navbar', component: NavbarComponent },
-    { path: 'register', component: RegisterComponent },
     { path: 'login', component: LoginComponent },
   ]},
+  { path: 'add-users', component: AddUsersComponent, children: [
+    { path: 'register', component: RegisterComponent },
+  ]}
 ];
 
 @NgModule({
@@ -38,4 +44,4 @@ const routes: Routes = [
   providers: [AuthGuard]
 })
 export class AppRoutingModule { }
-export const routingComponents = [RegisterComponent, LoginComponent, BrowseEntriesComponent, AddEntriesComponent, AddMoviesComponent, AddProductsComponent, SplashComponent, Navbar2Component, LandingPageComponent, ViewMoviesComponent]
+export const routingComponents = [RegisterComponent, LoginComponent, BrowseEntriesComponent, AddEntriesComponent, AddMoviesComponent, AddProductsComponent, SplashComponent, Navbar2Component, LandingPageComponent, ViewMoviesComponent, AddUsersComponent,]

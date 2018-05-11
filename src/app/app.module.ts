@@ -18,7 +18,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    routingComponents,
+    routingComponents
   ],
   imports: [
     BrowserModule,
