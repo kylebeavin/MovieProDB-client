@@ -37,6 +37,7 @@ export class DeleteMovieCompDialog {
     
   onSubmitUpdate() {
     this._movieService.deleteMovie(this.data)
+    location.reload();
   }
 
   onNoClick(): void {
