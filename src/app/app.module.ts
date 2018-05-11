@@ -13,12 +13,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { EditMovieComponent, EditMovieCompDialog } from './components/add-movies/view-movies/edit-movie/edit-movie.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     routingComponents,
+    EditMovieComponent,
+    EditMovieCompDialog
+  ],
+  entryComponents: [
+    EditMovieComponent,
+    EditMovieCompDialog
   ],
   imports: [
     BrowserModule,
