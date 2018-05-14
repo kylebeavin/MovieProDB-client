@@ -13,12 +13,36 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { EditMovieComponent, EditMovieCompDialog } from './components/add-movies/view-movies/edit-movie/edit-movie.component';
+import { DeleteMovieComponent, DeleteMovieCompDialog } from './components/add-movies/view-movies/delete-movie/delete-movie.component';
+import { ViewProductsComponent } from './components/add-products/view-products/view-products.component';
+import { DeleteProductComponent, DeleteProductCompDialog } from './components/add-products/view-products/delete-product/delete-product.component';
+import { EditProductComponent, EditProductCompDialog } from './components/add-products/view-products/edit-product/edit-product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     routingComponents,
+    EditMovieComponent,
+    EditMovieCompDialog,
+    DeleteMovieComponent,
+    DeleteMovieCompDialog,
+    ViewProductsComponent,
+    DeleteProductComponent,
+    DeleteProductCompDialog,
+    EditProductComponent,
+    EditProductCompDialog
+  ],
+  entryComponents: [
+    EditMovieComponent,
+    EditMovieCompDialog,
+    DeleteMovieComponent,
+    DeleteMovieCompDialog,
+    EditProductComponent,
+    EditProductCompDialog,
+    DeleteProductComponent,
+    DeleteProductCompDialog
   ],
   imports: [
     BrowserModule,

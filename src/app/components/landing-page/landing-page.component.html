@@ -1,2 +1,14 @@
-<app-register></app-register>
-<app-login></app-login>
+<mat-grid-list cols="2" rowHeight="900px">
+    <mat-grid-tile>
+            <app-register [dontShow]="showHide"></app-register>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-card class="login-tile">
+            <app-login></app-login>
+            <button mat-raised-button class="nav-btn" id="click" color="accent" type="button" label="Click" (click)="changeShowStatus()">click</button>
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile></mat-grid-tile>
+    <mat-grid-tile>
+    </mat-grid-tile>
+</mat-grid-list>

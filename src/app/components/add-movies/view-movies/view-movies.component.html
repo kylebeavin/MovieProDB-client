@@ -19,6 +19,20 @@
     <mat-cell *matCellDef="let movie">{{movie.genre}}</mat-cell>
   </ng-container>
 
+  <ng-container matColumnDef="editMovie" class="iconColumn">
+    <mat-header-cell *matHeaderCellDef>Edit</mat-header-cell>
+    <mat-cell *matCellDef="let movie">
+        <app-edit-movie [movie]=movie></app-edit-movie>
+    </mat-cell> 
+  </ng-container>
+
+  <ng-container matColumnDef="deleteMovie" id="iconColumn">
+    <mat-header-cell *matHeaderCellDef>Delete</mat-header-cell>
+    <mat-cell *matCellDef="let movie">
+        <app-delete-movie [movie]=movie></app-delete-movie>
+    </mat-cell> 
+  </ng-container>
+
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
 </mat-table>

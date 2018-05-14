@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../../../services/movies.service';
 
 import { Movie } from '../../../models/Movie';
-import { MOVIES } from './sample-movies';
 
 @Component({
   selector: 'app-view-movies',
@@ -11,7 +10,7 @@ import { MOVIES } from './sample-movies';
 })
 export class ViewMoviesComponent implements OnInit {
   movies: any;
-  displayedColumns = ["title", "productionCompany", "genre"]
+  displayedColumns = ["title", "productionCompany", "genre", "editMovie", "deleteMovie"]
 
   constructor(private _movieService: MovieService) { }
 

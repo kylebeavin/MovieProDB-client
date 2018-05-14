@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
+  showHide: boolean = false;
+  
+  changeShowStatus(){
+    this.showHide = !this.showHide;
+  }
   constructor() { }
 
   ngOnInit() {
