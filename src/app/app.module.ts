@@ -15,6 +15,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { EditMovieComponent, EditMovieCompDialog } from './components/add-movies/view-movies/edit-movie/edit-movie.component';
 import { DeleteMovieComponent, DeleteMovieCompDialog } from './components/add-movies/view-movies/delete-movie/delete-movie.component';
+import { ViewProductsComponent } from './components/add-products/view-products/view-products.component';
+import { DeleteProductComponent, DeleteProductCompDialog } from './components/add-products/view-products/delete-product/delete-product.component';
+import { EditProductComponent, EditProductCompDialog } from './components/add-products/view-products/edit-product/edit-product.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +27,22 @@ import { DeleteMovieComponent, DeleteMovieCompDialog } from './components/add-mo
     EditMovieComponent,
     EditMovieCompDialog,
     DeleteMovieComponent,
-    DeleteMovieCompDialog
+    DeleteMovieCompDialog,
+    ViewProductsComponent,
+    DeleteProductComponent,
+    DeleteProductCompDialog,
+    EditProductComponent,
+    EditProductCompDialog
   ],
   entryComponents: [
     EditMovieComponent,
     EditMovieCompDialog,
     DeleteMovieComponent,
-    DeleteMovieCompDialog
+    DeleteMovieCompDialog,
+    EditProductComponent,
+    EditProductCompDialog,
+    DeleteProductComponent,
+    DeleteProductCompDialog
   ],
   imports: [
     BrowserModule,

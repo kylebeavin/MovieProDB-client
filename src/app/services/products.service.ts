@@ -15,4 +15,20 @@ export class ProductService {
         console.log(res)
       })
   }
+
+  getAllProducts() {
+    return this._http.get(Api_Url)
+  }
+
+  updateProduct(productUpdate: Product) {
+    this._http.put(`${Api_Url}/${productUpdate.id}`, {'product': productUpdate})
+      .subscribe(res => {
+        console.log(res)
+      })
+  }
+
+  deleteProduct(deletedProduct: Product) {
+    return this._http.delete(`${Api_Url}/delete/${deletedProduct.id}`)
+      .subscribe(res => console.log('Deleted'))
+  }
 }
