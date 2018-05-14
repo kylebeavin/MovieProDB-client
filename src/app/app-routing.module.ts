@@ -30,7 +30,7 @@ const routes: Routes = [
     { path: 'navbar', component: NavbarComponent },
     { path: 'login', component: LoginComponent },
   ]},
-  { path: 'add-users', component: AddUsersComponent, children: [
+  { path: 'add-users', component: AddUsersComponent, canActivate: [AuthGuard], children: [
     { path: 'register', component: RegisterComponent },
   ]}
 ];
