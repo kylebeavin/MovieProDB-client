@@ -1,0 +1,48 @@
+<mat-table class="productsTable mat-elevation-z5" [dataSource]="products">
+  <!-- <ng-container matColumnDef="createdAt">
+    <mat-header-cell *matHeaderCellDef>Created At</mat-header-cell>
+    <mat-cell *matCellDef="let movie">{{movie.createdAt}}</mat-cell>
+  </ng-container> -->
+
+  <ng-container matColumnDef="productName">
+    <mat-header-cell *matHeaderCellDef>Product Name</mat-header-cell>
+    <mat-cell *matCellDef="let product">{{product.productName}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="seller">
+    <mat-header-cell *matHeaderCellDef>Seller</mat-header-cell>
+    <mat-cell *matCellDef="let product">{{product.seller}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="productNumber">
+    <mat-header-cell *matHeaderCellDef>Product #</mat-header-cell>
+    <mat-cell *matCellDef="let product">{{product.productNumber}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="price">
+    <mat-header-cell *matHeaderCellDef>Price</mat-header-cell>
+    <mat-cell *matCellDef="let product">{{product.price}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="category">
+    <mat-header-cell *matHeaderCellDef>Category</mat-header-cell>
+    <mat-cell *matCellDef="let product">{{product.category}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="editProduct" class="iconColumn">
+    <mat-header-cell *matHeaderCellDef>Edit</mat-header-cell>
+    <mat-cell *matCellDef="let product">
+        <app-edit-product [product]=product></app-edit-product>
+    </mat-cell> 
+  </ng-container>
+
+  <ng-container matColumnDef="deleteProduct" id="iconColumn">
+    <mat-header-cell *matHeaderCellDef>Delete</mat-header-cell>
+    <mat-cell *matCellDef="let product">
+        <app-delete-product [product]=product></app-delete-product>
+    </mat-cell> 
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+</mat-table>
