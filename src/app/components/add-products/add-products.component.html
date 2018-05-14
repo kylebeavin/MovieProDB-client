@@ -1,32 +1,32 @@
 <h1>Add a Product</h1>
 <hr />
 
-<form class="product-form" (ngSubmit)="onSubmit()" [formGroup]="_productForm">
-  <div>
+<form class="product-form mat-elevation-z3" (ngSubmit)="onSubmit()" [formGroup]="_productForm">
+  <div class="inputField">
     <mat-form-field class="add-product-name">
       <input matInput id="productNameField" placeholder="Product name" value="" formControlName="productName" type="text" />
     </mat-form-field>
   </div>
 
-  <div>
+  <div class="inputField">
     <mat-form-field class="add-seller">
       <input matInput placeholder="Seller" formControlName="seller" type="text" />
     </mat-form-field>
   </div>
 
-  <div>
+  <div class="inputField">
     <mat-form-field class="add-product-number">
       <input matInput placeholder="Product number" value="" formControlName="productNumber" type="text" />
     </mat-form-field>
   </div>
 
-  <div>
+  <div class="inputField">
     <mat-form-field class="add-price">
       <input matInput placeholder="Price" value="" formControlName="price" type="text" />
     </mat-form-field>
   </div>
 
-  <div>
+  <div class="inputField">
     <mat-form-field>
       <mat-select placeholder="Category" formControlName="category">
         <mat-option *ngFor="let category of categories" [value]="category">
@@ -36,7 +36,7 @@
     </mat-form-field>
   </div>
 
-  <button mat-raised-button color="primary" type="submit">Add Product</button>
+  <button mat-raised-button color="accent" type="submit">Add Product</button>
 </form>
 
 <hr />
